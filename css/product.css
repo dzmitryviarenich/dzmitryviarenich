@@ -1110,11 +1110,17 @@ footer .very-bottom .container p {
     margin-bottom: 48px;
   }
   .product-page.dda-admin .product .text-row h4 {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
   .product-page.dda-ds .product .one-image-row {
     margin-top: 24px;
     margin-bottom: 48px;
+  }
+  .product-page.dda-admin .product .one-image-row.no-margin-bottom {
+    margin-bottom: 4px;
+  }
+  .product-page .product .text-row h4 {
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 400px) {

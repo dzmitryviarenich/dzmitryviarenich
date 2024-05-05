@@ -412,7 +412,7 @@
     background-image: none;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     width: 100%;
     height: auto;
@@ -438,7 +438,7 @@
     width: 30px;
     height: 30px;
     right: 0;
-    top: 0;
+    top: 12px;
     stroke: #111111;
   }
 }
@@ -623,6 +623,9 @@
   .case-page .case .full-w-banner.videos .media-content {
     max-width: 70%;
   }
+  .case-page footer .container .wrapper .card .user-content.show-on-mobile svg.arrow {
+    top: 8px;
+  }
 }
 @media screen and (max-width: 431px) {
   .main-page header .container {
@@ -693,12 +696,13 @@
   }
   .main-page main .case .btn {
     min-width: 120px;
+    width: 100%;
     text-align: center;
     margin-top: 20px;
     padding: 12px 14px;
   }
   .main-page main .case .btn.btn-swipe:hover {
-    box-shadow: inset 360px 0 0 0 #111111;
+    box-shadow: inset 420px 0 0 0 #111111;
     color: #fff;
   }
   .main-page main .case .chips {
@@ -766,6 +770,12 @@
   }
   .case-page .case .full-w-banner.videos .media-content {
     max-width: 80%;
+  }
+  .case-page footer .container .wrapper .card .user-content.show-on-mobile svg.arrow {
+    top: 5px;
+  }
+  .case-page .case .container.o-r-d-l .text-only.no-margin-bottom {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 400px) {
