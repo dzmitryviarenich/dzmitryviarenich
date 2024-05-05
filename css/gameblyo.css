@@ -327,7 +327,7 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  background: #f8f8f7;
+  border: 1px solid #e8e8e8;
   padding: 68px;
 }
 .case-page .case .full-w-banner.videos .right {
@@ -335,9 +335,9 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  background-image: url(../img/gameblyo/video-bg.png);
-  background-size: cover;
+  border: 1px solid #e8e8e8;
   padding: 68px;
+  border-left: none;
 }
 .case-page .case .full-w-banner.videos .media-content {
   max-width: 320px;

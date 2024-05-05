@@ -368,7 +368,7 @@
           justify-content: center;
           align-items: center;
           width: 50%;
-          background: #f8f8f7;
+          border: 1px solid $img-border;
           padding: 68px;
         }
         .right {
@@ -376,9 +376,9 @@
           justify-content: center;
           align-items: center;
           width: 50%;
-          background-image: url(../img/gameblyo/video-bg.png);
-          background-size: cover;
+          border: 1px solid $img-border;
           padding: 68px;
+          border-left: none;
         }
         .media-content {
           max-width: 320px;
