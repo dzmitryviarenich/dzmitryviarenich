@@ -7,7 +7,7 @@ document.getElementById('password').addEventListener('keydown', function(event) 
 function login() {
     var password = document.getElementById('password').value;
 
-    var validPassword = "n-able";
+    var validPassword = "showmeall";
 
     if (password === validPassword) {
         window.location.href = "home.html"; 
