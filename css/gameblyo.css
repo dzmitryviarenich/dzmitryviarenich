@@ -192,6 +192,42 @@
 .case-page .case .container .case-single-row img:nth-last-child(1) {
   margin-bottom: 0;
 }
+.case-page .case .container .case-single-row a {
+  color: blue;
+  display: flex;
+  font-size: 18px;
+}
+.case-page .case .container .case-single-row a .popout {
+  display: flex;
+  padding-left: 8px;
+}
+.case-page .case .container .case-single-row a:link {
+  text-decoration: underline;
+  color: blue;
+}
+.case-page .case .container .case-single-row a:visited {
+  text-decoration: underline;
+  color: blue;
+}
+.case-page .case .container .case-single-row a:hover {
+  text-decoration: underline;
+  color: rgb(0, 0, 121);
+}
+.case-page .case .container .case-single-row a:active {
+  text-decoration: underline;
+  color: blue;
+}
+.case-page .case .container .case-single-row.link {
+  margin-top: 48px;
+}
+.case-page .case .container .case-single-row.link h4 {
+  margin-bottom: 12px;
+}
+.case-page .case .container .case-single-row.link img {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
 .case-page .case .container .case-row {
   display: flex;
   justify-content: space-between;

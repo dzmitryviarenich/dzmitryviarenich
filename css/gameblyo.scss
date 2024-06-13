@@ -224,6 +224,45 @@
             margin-bottom: 0;
           }
         }
+        a {
+          color: blue;
+          display: flex;
+          font-size: 18px;
+          .popout {
+            display: flex;
+            padding-left: 8px;
+          }
+          &:link {
+            text-decoration: underline;
+            color: blue;
+          }
+  
+          &:visited {
+            text-decoration: underline;
+            color: blue;
+          }
+  
+          &:hover {
+            text-decoration: underline;
+            color: rgb(0, 0, 121);
+          }
+  
+          &:active {
+            text-decoration: underline;
+            color: blue;
+          }
+        }
+        &.link {
+          margin-top: 48px;
+          h4 {
+            margin-bottom: 12px;
+          }
+          img {
+            width: 24px;
+            height: 24px;
+            background-color: transparent;
+          }
+        }
       }
       .case-row {
         display: flex;
