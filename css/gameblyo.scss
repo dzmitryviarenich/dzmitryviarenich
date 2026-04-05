@@ -236,17 +236,17 @@
             text-decoration: underline;
             color: blue;
           }
-  
+
           &:visited {
             text-decoration: underline;
             color: blue;
           }
-  
+
           &:hover {
             text-decoration: underline;
             color: rgb(0, 0, 121);
           }
-  
+
           &:active {
             text-decoration: underline;
             color: blue;
@@ -261,6 +261,19 @@
             width: 24px;
             height: 24px;
             background-color: transparent;
+          }
+        }
+        ol,
+        ul {
+          margin-bottom: 48px;
+          li {
+            margin: 0 0 12px 0;
+            &:nth-last-of-type(1) {
+              margin: 0;
+            }
+          }
+          &.no-margin {
+            margin-bottom: 0;
           }
         }
       }
@@ -465,9 +478,6 @@
           background-size: cover;
           background-position: center;
         }
-        &.admin {
-          padding-bottom: 64px;
-        }
       }
     }
   }
@@ -590,7 +600,6 @@ footer {
 }
 
 .videos {
-
   h4 {
     font-family: "Inter";
     font-style: normal;

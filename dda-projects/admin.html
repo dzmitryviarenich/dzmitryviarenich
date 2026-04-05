@@ -80,27 +80,73 @@
           <div class="text-row">
             <h3>Overview</h3>
             <p>
-              The admin panel for flexible configuration of our applications is
-              typically used by internal users or client-side administrators of
-              our product.
+              <span>
+                DDA Admin is the configuration layer behind the entire DDA
+                ecosystem.
+              </span> It allows Site and System Administrators to tailor
+              application settings to their organization’s needs, from document
+              management and data mappings to automation and integrations.
+            </p>
+            <p>
+              I’ve led Admin design from day one, working closely with backend
+              engineers to build new configuration apps and improve existing
+              ones.
             </p>
           </div>
         </div>
       </section>
-      <section class="product role">
+      <section class="product role challenge">
         <div class="container">
           <div class="text-row">
-            <h3>My Impact</h3>
-            <p>Since my 1st day I've been leading our admin panel.</p>
+            <h3>The Challenge</h3>
             <p>
-              I designed <span>new applications</span> and constantly
-              <span>upgraded existing</span> ones.
+              Before admin tools existed, configuring DDA applications meant
+              <span>
+                manually writing JSON or XML — error-prone, slow, and
+                inaccessible to non-technical administrators </span
+              >. As more clients onboarded, visual configuration interfaces
+              became critical.
             </p>
             <p>
-              Most of the admin apps are user-friendly interfaces that replaced
-              the outdated method of manually creating JSON or XML files to
-              configure our applications
+              <span
+                >The goal: replace raw config files with intuitive apps</span
+              >
+              that accurately represent complex data structures while remaining
+              approachable for client admins who need precise control but aren't
+              necessarily technical.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="product approach">
+        <div class="container">
+          <div class="text-row">
+            <h3>My Approach</h3>
+            <ul class="no-margin">
+              <li>
+                <p>
+                  <span>Backend engineers as primary partners.</span> Admin
+                  interfaces map directly to complex data models and APIs.
+                  Together we translated system constraints into usable UI.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Designing for client admins.</span> Site/System
+                  Administrators configure parameters for specific client needs.
+                  The design had to make complex configurations feel
+                  approachable without sacrificing power.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Consistency through the Design System.</span> All admin
+                  apps are built on it, ensuring a uniform experience across a
+                  growing number of screens.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -108,28 +154,25 @@
       <section class="product solution">
         <div class="container">
           <div class="text-row">
-            <h3>Some Projects</h3>
+            <h3>Selected Projects</h3>
           </div>
           <div class="text-row">
             <h4>Data Sets Definitions Management</h4>
             <p>
-              This Admin App is used to configure the settings and parameters of
-              Data Audit Application. Allows users create and manage Data Set
-              Definitions for individual customer needs.
+              Configuration app for Data Audit. Users create and manage rules
+              determining which data gets compared for each field in specified
+              documents.
             </p>
-            <p>
-              <span>Data Set Definition</span> determines which data will be
-              compared for each specified data field in specified documents.
-            </p>
-            <p>It shows all existing dataset definitions on the site.</p>
           </div>
           <div class="one-image-row">
             <img class="no-border" src="../img/dda/ad-dsdm1.png" alt="" />
           </div>
           <div class="text-row">
             <p>
-              A user can create a new one from scratch or copy an existing one
-              (and change it as needed).
+              A dual-panel picker (available ↔ selected fields)
+              <span>
+                makes composing complex definitions easy and error-free </span
+              >.
             </p>
           </div>
           <div class="one-image-row">
@@ -138,8 +181,11 @@
           <div class="text-row">
             <h4>Data Mappings Management</h4>
             <p>
-              The goal of Data Mapper Manager is to review and manage the
-              existing mappings created with Data Mapper app.
+              Interface for managing rules that
+              <span>
+                connect extracted document values to standardized data points </span
+              >. Supports loan-level and site-level views, filtering, search,
+              and bulk import/export across thousands of entries.
             </p>
           </div>
           <div class="one-image-row">
@@ -147,10 +193,80 @@
           </div>
           <div class="text-row">
             <h4>LIS Configurator</h4>
-            <p>The app is designed for configuring functions of our product.</p>
+            <p>
+              Configuration for core product functions was previously managed
+              through raw XML. The
+              <span>app now provides structured lists</span> with Active and
+              Draft states, inline XML preview, and import/export,
+              <span>
+                making configuration visible without direct file editing </span
+              >.
+            </p>
           </div>
           <div class="one-image-row no-margin-bottom">
             <img src="../img/dda/ad-lis.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="product results impact">
+        <div class="container">
+          <div class="text-row">
+            <h3>Impact</h3>
+            <ul class="no-margin">
+              <li>
+                <p>
+                  <span
+                    >Replaced manual JSON/XML editing with visual
+                    interfaces:</span
+                  >
+                  reducing errors and making configuration accessible to client
+                  admins.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>New admin apps shipped</span> alongside every major web
+                  feature, keeping configuration in sync with product growth.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Faster client onboarding:</span> admins can set up and
+                  maintain environments independently, without engineering
+                  support.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Consistent experience:</span> shared Design System means
+                  admins learn one pattern and apply it everywhere.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Scaled with the product:</span> the system grew
+                  alongside DDA Web's expansion from 30% to 70%+ feature parity,
+                  supporting every new application along the way.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="product results reflection">
+        <div class="container">
+          <div class="text-row">
+            <h3>Reflection</h3>
+
+            <p>
+              Admin tools rarely get portfolio spotlight, but they're the
+              invisible backbone of a configurable product. Designing them
+              taught me to think in abstractions — translating data models into
+              interfaces that feel obvious, even when the underlying logic is
+              anything but.
+            </p>
           </div>
         </div>
       </section>

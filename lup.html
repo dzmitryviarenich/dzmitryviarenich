@@ -78,24 +78,50 @@
           <div class="text-row">
             <h3>About Product</h3>
             <p>
-              LUP is a compliance audit system used in supply chain management.
+              LUP is a supply chain compliance system helping LIDL ensure
+              vendors meet legal and internal standards across 3,000+ factories
+              in 18+ countries.
             </p>
             <p>
-              It helps LIDL make sure its vendor organizations are following
-              laws, rules, regulations, and guidelines in Asia-Pacific (APAC)
-              region.
+              I was the sole designer, working from ideation to launch and
+              shaping everything from information architecture to final UI and
+              design system.
             </p>
           </div>
         </div>
       </section>
-      <section class="product role">
+      <section class="product process">
         <div class="container">
-          <div class="text-row">
-            <h3>My Role</h3>
+          <div class="text-row add-margin-bottom">
+            <h3>Process</h3>
             <p>
-              I worked on LUP <span>from ideation to product launch</span>. It
-              was quite the journey.Most of the time on the project I was only
-              one designer in the team what shows my dedication and skills.
+              As the sole designer, I
+              <span>worked closely with Business Analyst</span>, and
+              <span>validated all key decisions with Product Owner</span> on the
+              client side and two <span>Audit Managers as domain experts</span>.
+            </p>
+          </div>
+          <div class="text-row add-margin-bottom">
+            <h4 class="smaller-margin-bottom">Discovery</h4>
+            <p>
+              Mapped the spreadsheet structure, interviewed auditors, understood
+              field workflows. The 140-column spreadsheet became the blueprint
+              for the data model and IA.
+            </p>
+          </div>
+          <div class="text-row add-margin-bottom">
+            <h4 class="smaller-margin-bottom">Ideation & Validation</h4>
+            <p>
+              Explored approaches for core flows, validated with the PO and
+              Audit Managers through wireframes and prototypes
+            </p>
+          </div>
+          <div class="text-row">
+            <h4 class="smaller-margin-bottom">Iterative Delivery</h4>
+            <p>
+              Design delivered in sprints. MVP focused on factory management and
+              audit tracking; later releases added dashboard, calendar planning,
+              responsive layouts, and supporting modules.
             </p>
           </div>
         </div>
@@ -103,44 +129,20 @@
       <section class="product problem">
         <div class="container">
           <div class="text-row">
-            <h3>Problem</h3>
+            <h3>The Problem</h3>
             <p>
-              The auditors team had a tough time managing a lot of data. They
-              were using <span>one huge spreadsheet</span> with tons of columns
-              and rows to track info about vendors and audits.
+              The auditors team
+              <span>
+                managed all vendor and audit data in one massive Excel
+                spreadsheet
+              </span>
+              — 140+ columns, 3,000+ rows, multiple people editing
+              simultaneously. This led to data integrity risks (overwritten
+              entries, conflicting edits), no access controls.
             </p>
-            <p>Spreadsheet size:</p>
-            <ul>
-              <li>
-                <p>Over 140 columns of vendors and audits data</p>
-              </li>
-              <li>
-                <p>Over 2000 rows of vendors</p>
-              </li>
-            </ul>
           </div>
           <div class="one-image-row">
             <img class="no-border" src="img/lup/problem.png" alt="" />
-          </div>
-          <div class="text-row">
-            <p>
-              It's <span>hard to keep everything organized</span> and may lead
-              to inefficiencies:
-            </p>
-            <ul>
-              <li>
-                <p>Limited scalability</p>
-              </li>
-              <li>
-                <p>Data integrity risks</p>
-              </li>
-              <li>
-                <p>Performance issues</p>
-              </li>
-              <li>
-                <p>Security concerns</p>
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -149,17 +151,21 @@
           <div class="text-row margin-bottom">
             <h3>Solution</h3>
             <p>
-              We made a new system to help our auditors team handle vendor and
-              audit data better. Instead of using complicated spreadsheet, our
-              system is <span>smart and easy to use</span>.
+              Web platform that replaced the spreadsheet with structured,
+              role-based workflows:
             </p>
           </div>
 
           <div class="text-row">
             <h4>Dashboard</h4>
             <p>
-              Here users can see important info about audits and vendors. This
-              helps them <span>stay organized and on top of things</span>.
+              Audit expiration stats, internal audit scores, factory and
+              database statuses, APAC geographic distribution, and a real-time
+              activity feed —
+              <span>
+                giving managers an at-a-glance picture of the entire compliance
+                operation </span
+              >.
             </p>
           </div>
           <div class="one-image-row">
@@ -169,9 +175,11 @@
           <div class="text-row">
             <h4>Factories</h4>
             <p>
-              Having different views like a list, map, and calendar helps users
-              understand their factory network better. It also makes it
-              <span>easier to make decisions and manage</span>.
+              The heart of the system. Rich detail pages. Multiple views.
+              <span>
+                Let auditors explore their factory network the way that fits
+                their task.
+              </span>
             </p>
           </div>
           <div class="one-image-row">
@@ -182,22 +190,19 @@
           </div>
           <div class="text-row">
             <h4>Factory Details</h4>
-            <p>
-              This page shows users
-              <span>everything they need to know about the factory</span>. It
-              has audits data, certifications, who to contact, and other
-              important info.
-            </p>
           </div>
           <div class="one-image-row">
             <img class="no-border" src="img/lup/factory-detail.png" alt="" />
           </div>
           <div class="text-row">
-            <h4>Audit Planning</h4>
+            <h4>Audit Planning & Execution</h4>
             <p>
-              Audit Planning is a <span>crucial part of the app</span>. All
-              existing audits can be viewed in three ways: list, calendar, and
-              map. You can filter and sort them, as well as add or edit audits.
+              Calendar-driven planning with list and map alternatives. Each
+              audit contains a structured task list.
+              <span>
+                Replacing informal tracking in spreadsheet comments and email
+                threads.
+              </span>
             </p>
           </div>
           <div class="one-image-row">
@@ -208,10 +213,6 @@
           </div>
           <div class="text-row">
             <h4>Tasks</h4>
-            <p>
-              Tasks are assigned to users, helping them stay organized and
-              focused on what and when needs to be done.
-            </p>
           </div>
           <div class="one-image-row no-margin-bottom">
             <img src="img/lup/tasks.png" alt="" />
@@ -223,12 +224,10 @@
           <div class="text-row">
             <h3>Responsive is a Must</h3>
             <p>
-              Auditors need a responsive web app so they can easily access audit
-              information from any device, like a laptop, tablet, or phone.
-            </p>
-            <p>
-              This helps them work efficiently, whether they're in the office or
-              out in the field.
+              Laptop at the office, tablet during factory visits, phone on the
+              go. The full experience works across breakpoints — the factory
+              detail page, being the most information-dense, required especially
+              careful prioritization for mobile
             </p>
           </div>
           <div class="one-image-row no-margin-bottom">
@@ -241,13 +240,9 @@
           <div class="text-row">
             <h3>Design System</h3>
             <p>
-              Design System is important when you're starting a big project from
-              scratch. It helps keep everything consistent, saves time, and
-              makes it easier for everyone to work together.
-            </p>
-            <p>
-              I created our Design System and it helped us keep everything
-              consistent and work efficiently.
+              Built from scratch — typography, colors, elements, tables,
+              navigation, icons, and component patterns — ensuring consistency
+              across a large application developed over 18 months.
             </p>
           </div>
           <div class="one-image-row no-margin-bottom">
@@ -255,30 +250,71 @@
           </div>
         </div>
       </section>
-      <section class="product des-sys">
+      <section class="product results impact">
         <div class="container">
           <div class="text-row">
-            <h3>Results</h3>
-            <p>LIDL Unified Platform is better than using a big spreadsheet.</p>
+            <h3>Impact</h3>
+            <ul class="no-margin">
+              <li>
+                <p>
+                  3,000+ factories across 18+ APAC countries managed through a
+                  <span
+                    >structured system, fully replacing the 140-column
+                    spreadsheet</span
+                  >.
+                </p>
+              </li>
 
-            <p>Here are some improvements our system brings:</p>
-            <ul>
               <li>
-                <p>Better organization</p>
+                <p>
+                  <span>Improved usability.</span> Scheduling, tasks,
+                  follow-ups, documents, and communication — all in one place
+                  instead of spreadsheets, emails, and shared drives.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span>Fewer data errors</span> — structured entry with
+                  validation and role-based access eliminated overwritten cells,
+                  conflicting edits, and lost updates.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span>Design system kept UI consistent</span> across 9+
+                  modules over 18 months.
+                </p>
               </li>
               <li>
-                <p>Easier teamwork</p>
+                <p>
+                  <span>Responsive design</span> let auditors update statuses
+                  from a tablet or phone during field visits.
+                </p>
               </li>
               <li>
-                <p>Automated tasks for fewer mistakes</p>
-              </li>
-              <li>
-                <p>Customizable to fit various needs</p>
-              </li>
-              <li>
-                <p>Efficient handling of large amounts of data</p>
+                <p>
+                  <span>Product launched to production</span> and adopted by the
+                  LIDL APAC compliance team.
+                </p>
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="product results reflection">
+        <div class="container">
+          <div class="text-row">
+            <h3>Reflection</h3>
+
+            <p>
+              The biggest lesson: when replacing a tool people have used for
+              years, you have to understand not just what data it holds, but how
+              they use it. That empathy is what makes the new system feel like an
+              upgrade, not a disruption.
+            </p>
           </div>
         </div>
       </section>
@@ -289,45 +325,45 @@
           <h3>Explore More</h3>
           <div class="wrapper">
             <div class="card more-dda">
-                <a href="dda.html">
-                  <div class="overlay">
-                    <div class="user-content">
-                      <div class="name">
-                        <h3>Data and Document Automation</h3>
-                        <p>
-                          Automates tasks for lenders, investors, and servicers
-                        </p>
-                      </div>
-                      <div class="arrow">
-                        <img src="img/arrow-up-linear.svg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <div class="user-content show-on-mobile">
-                  <a href="dda.html">
+              <a href="dda.html">
+                <div class="overlay">
+                  <div class="user-content">
                     <div class="name">
                       <h3>Data and Document Automation</h3>
-                      <p>Automates tasks for lenders, investors, and servicers</p>
+                      <p>
+                        Automates tasks for lenders, investors, and servicers
+                      </p>
                     </div>
-  
-                    <svg
-                      class="arrow"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                    >
-                      <path
-                        d="M8.45765 23.5426L23.5426 8.45764M23.5426 8.45764V19.7713M23.5426 8.45764H12.2289"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
+                    <div class="arrow">
+                      <img src="img/arrow-up-linear.svg" alt="" />
+                    </div>
+                  </div>
                 </div>
+              </a>
+              <div class="user-content show-on-mobile">
+                <a href="dda.html">
+                  <div class="name">
+                    <h3>Data and Document Automation</h3>
+                    <p>Automates tasks for lenders, investors, and servicers</p>
+                  </div>
+
+                  <svg
+                    class="arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                  >
+                    <path
+                      d="M8.45765 23.5426L23.5426 8.45764M23.5426 8.45764V19.7713M23.5426 8.45764H12.2289"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
             <div class="card more-gameblyo">
               <a href="gameblyo.html">
@@ -373,7 +409,6 @@
                 </a>
               </div>
             </div>
-            
           </div>
         </div>
       </section>

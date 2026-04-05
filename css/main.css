@@ -185,7 +185,6 @@ header .intro p .no-wrap {
 }
 header .photo {
   padding-right: 60px;
-  /* Keyframes */
 }
 header .photo .portrait-line {
   z-index: 2;
@@ -210,6 +209,9 @@ header .photo .line.draw3 {
   stroke-dasharray: 1406.209;
   stroke-dashoffset: 1406.209;
   animation: draw3 linear 2.1s forwards;
+}
+header .photo {
+  /* Keyframes */
 }
 @keyframes draw1 {
   from {

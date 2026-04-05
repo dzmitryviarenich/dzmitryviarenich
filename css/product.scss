@@ -182,9 +182,13 @@
   }
   .product {
     .text-row {
+      &.add-margin-bottom{
+        margin-bottom: 56px;
+      }
       &.link {
         margin-top: 48px;
       }
+
       h3 {
         font-family: "Inter";
         font-style: normal;
@@ -193,6 +197,9 @@
         line-height: 150%;
         color: $text;
         margin: 0 0 48px 0;
+        &.no-margin {
+          margin-bottom: 0;
+        }
       }
       p {
         padding-right: 50%;
@@ -209,21 +216,35 @@
         span {
           font-weight: 500;
         }
+        &.quote {
+          border-left: 6px solid #000;
+          padding-left: 16px;
+          margin: 16px 0;
+          line-height: 1.6;
+          font-style: italic;
+          padding-right: 48%;
+          margin-top: 16px;
+        }
       }
+
       ol,
       ul {
         width: 70%;
+        margin-bottom: 48px;
         li {
           margin: 0 0 12px 0;
           &:nth-last-of-type(1) {
             margin: 0;
           }
         }
-        margin-bottom: 12px;
         &.no-margin {
           margin-bottom: 0;
         }
+        p {
+          padding-right: 30%;
+        }
       }
+
       h4 {
         font-family: "Inter";
         font-style: normal;
@@ -234,6 +255,9 @@
         color: $text-gray2;
         margin-top: 0;
         margin-bottom: 32px;
+        &.smaller-margin-bottom {
+          margin-bottom: 24px;
+        }
       }
       a {
         color: blue;
@@ -273,17 +297,34 @@
           margin-bottom: 80px;
         }
       }
+      h4 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $text-gray2;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
     }
+
     .two-cells-row {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
+      border-bottom: 1px $gray4 dashed;
+      padding-bottom: 40px;
       .left {
         width: 30%;
         img {
           width: 100%;
           border: 1px solid $img-border;
+          &.no-border {
+            border: none;
+          }
         }
         margin-right: 64px;
       }
@@ -292,6 +333,8 @@
       }
       &:nth-last-of-type(1) {
         margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
       }
     }
     &.exp22 {
@@ -303,6 +346,12 @@
       width: 100%;
       margin-top: 40px;
       margin-bottom: 80px;
+      &.smaller-margin-top {
+        margin-top: 24px;
+      }
+      &.smaller-margin-bottom {
+        margin-bottom: 48px;
+      }
       &.analyzers {
         margin-top: 80px;
       }
@@ -330,6 +379,14 @@
       font-weight: 500;
       line-height: 130%;
       margin: 0;
+    }
+    h2 {
+      color: $text;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 130%;
+      margin: 24px 0 0 0;
     }
     > .container {
       display: flex;

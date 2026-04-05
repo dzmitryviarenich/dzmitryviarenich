@@ -69,6 +69,9 @@
             >/
           </div>
           <h1>Audit Analyzer</h1>
+          <h2>
+            First autonomous post-closing solution in the mortgage industry
+          </h2>
         </div>
         <section class="wrapper aus">
           <div class="container product-preview-images">
@@ -82,27 +85,118 @@
       <section class="product about">
         <div class="container">
           <div class="text-row">
-            <h3>About Product</h3>
+            <h3>Overview</h3>
             <p>
-              Audit Analyzer is the first autonomous post-closing solution for
-              the mortgage industry that helps check if loans are closed
-              properly.
+              Audit Analyzer automates post-closing loan review — verifying that
+              closed loan packages are complete, accurate, and compliant before
+              transfer to investors.
             </p>
             <p>
-              This saves time and helps reduce mistakes when loans are
-              transferred to investors.
+              I designed the container application, two of three core components
+              (Missing Documents, Checklist), and adapted the existing Data
+              Audit app into a new mode for this context.
+            </p>
+            <p class="quote">
+              <span>Key result:</span> Shifted review from a manual ~45&nbsp;min
+              "stare and compare" process to an exceptionbased workflow of
+              10–15&nbsp;minutes per loan.
             </p>
           </div>
         </div>
       </section>
-      <section class="product role">
+      <section class="product problem">
         <div class="container">
           <div class="text-row">
-            <h3>My Role</h3>
+            <h3>The Problem</h3>
             <p>
-              I worked on this project from 0 to 1 and continue to support it.
-              I've done a lot of important work in all stages of designing Audit
-              Analyzer.
+              After a mortgage closes, a Post-Closing Analyst must verify: all
+              required documents are present, data across 20+ documents matches
+              the LOS, and the loan meets dozens of compliance rules.
+            </p>
+            <p>
+              <span>This was done entirely by hand.</span> Analysts reviewed
+              documents, cross-checked data, and tracked findings manually —
+              known as “stare and compare”.
+            </p>
+            <p>
+              <span>
+                With 1,000–3,000 loans per month, the cost was enormous — in
+                time and risk.
+              </span>
+              Late errors led to buybacks, penalties, and regulatory exposure.
+              Inconsistent rule application and no clear audit trail made it
+              worse.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="product research">
+        <div class="container">
+          <div class="text-row">
+            <h3>Discovery & Research</h3>
+
+            <h4>SME collaboration</h4>
+            <p>
+              Post-closing compliance has layers of regulatory nuance that
+              aren’t intuitive. I
+              <span>
+                worked closely with our SME to understand investor guidelines,
+                loan-type-specific requirements, and compliance edge cases </span
+              >.
+            </p>
+
+            <p>
+              Together, we <span>translated regulatory logic into design</span>,
+              shaping 80+ checklist rules and the data audit comparison matrix.
+            </p>
+
+            <h4>Pre-launch validation (8 participants)</h4>
+            <p>
+              Collaborated with UX Research on validation with real mortgage
+              professionals —
+              <span>
+                2 focus groups with Post-Closing Analysts and QC Reviewers, 8
+                participants total, 90-minute remote sessions
+              </span>
+              with workflow walkthrough, interactive demo, TAM3 survey, and
+              structured feedback.
+            </p>
+
+            <h4>Key findings</h4>
+            <ol class="">
+              <li>
+                <p>
+                  <span>Analysts wanted to see only exceptions.</span> The
+                  exception-based paradigm was strongly validated.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Waive flow needed mandatory reasons</span> with full
+                  audit trail (who, when, why).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Data Audit was the biggest usability concern:</span> too
+                  many data points, unclear which mismatches actually matter.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Three-tab structure (Missing Docs → Checklist → Data Audit)
+                  matched analysts' mental model of the review process.
+                </p>
+              </li>
+            </ol>
+            <div class="one-image-row no-margin">
+              <img class="" src="../img/analyzers/audit-research.png" alt="" />
+            </div>
+            <br />
+            <p>
+              Ease of Use scores flagged Data Audit as an area needing continued
+              iteration, consistent with qualitative feedback.
             </p>
           </div>
         </div>
@@ -111,168 +205,112 @@
       <section class="product aus">
         <div class="container">
           <div class="text-row">
-            <h3>Post-Closing Process</h3>
-            <p>
-              The classic manual mortgage post-closing process involves these
-              steps:
-            </p>
-            <ol start="1">
+            <h3>Design Principles</h3>
+
+            <ol start="1" class="no-margin">
               <li>
-                <p>Gathering all needed documents.</p>
+                <p>
+                  <span>Exception-based, not exhaustive.</span> Instead of
+                  reviewing everything, Audit Analyzer surfaces only failures,
+                  reducing focus to 8–15 exceptions from 200+ data points.
+                </p>
               </li>
               <li>
-                <p>Checking each document for accuracy and compliance.</p>
+                <p>
+                  <span>All decisions are logged.</span> All waivers require a
+                  reason. The system records who, when, and why — ensuring a
+                  complete audit trail.
+                </p>
               </li>
               <li>
-                <p>Entering information into the system.</p>
+                <p>
+                  <span>Three layers, one flow.</span> Missing Documents →
+                  Checklist → Data Audit mirrors the analyst's natural review
+                  sequence. Red badges on each tab show failure counts at a
+                  glance.
+                </p>
               </li>
               <li>
-                <p>Double-checking for errors.</p>
-              </li>
-              <li>
-                <p>Fixing any mistakes.</p>
-              </li>
-              <li>
-                <p>Approving the loan.</p>
-              </li>
-              <li>
-                <p>Storing all documents safely for the future.</p>
+                <p>
+                  <span>Adapt, don't rebuild.</span> Data Audit already existed
+                  as a standalone app. Instead of rebuilding it, I added a new
+                  mode and adapted it to work inside Audit Analyzer.
+                </p>
               </li>
             </ol>
           </div>
         </div>
       </section>
 
-      <section class="product problem">
+      <section class="product challenge">
         <div class="container">
           <div class="text-row">
-            <h3>Problem</h3>
+            <h3>Design Challenge: Integrating Data Audit</h3>
             <p>
-              Our customers have faced some issues with the manual post-closing
-              process:
+              Data Audit existed as a standalone app with its own team. Audit
+              Analyzer needed it to support waiving individual failed data
+              points with mandatory reasons — without this, analysts couldn't
+              complete their review in one place.
+              <span>
+                Data Audit's team resisted adding complexity to an already dense
+                application.
+              </span>
             </p>
-            <ul>
-              <li>
-                <p>It takes a lot of time.</p>
-              </li>
-              <li>
-                <p>Mistakes can happen more easily.</p>
-              </li>
-              <li>
-                <p>Things can get delayed.</p>
-              </li>
-              <li>
-                <p>It's not as efficient as it could be.</p>
-              </li>
-            </ul>
+            <p>
+              <span>
+                I found the minimal solution: Waive Mode as a separate tab that
+                doesn't touch the existing Regular View.
+              </span>
+              Data Audit's team kept their experience intact and Audit Analyzer
+              got what it needed. I facilitated alignment between both teams.
+            </p>
           </div>
         </div>
       </section>
       <section class="product solution">
         <div class="container">
           <div class="text-row">
-            <h3>Solution</h3>
-            <p>
-              Audit Analyzer uses smart technology to make reliable decisions
-              and ensures that
-              <span>loans meet all the rules and regulations</span>. It looks at
-              data from the loan system and documents in the loan package to
-              <span>make sure everything is correct</span>.
-            </p>
-            <p>
-              Audit Analyzer is made up of three parts that help make sure loan
-              packages are complete and follow the rules:
-            </p>
+            <h3>Key Features</h3>
           </div>
           <div class="text-row">
-            <h4>1. Missing Documents</h4>
+            <h4>Missing Documents</h4>
             <p>
-              This part checks if all the needed documents are there for the
-              loan.
+              Determines required documents based on loan parameters and checks
+              presence. Tracks per applicant with filters for Missing, Waived,
+              All. Waive requires mandatory reason with audit trail.
             </p>
-            <p>It shows:</p>
-            <ul>
-              <li>
-                <p>Documents missing according to the loan data.</p>
-              </li>
-              <li>
-                <p>Documents that are unknown.</p>
-              </li>
-              <li>
-                <p>
-                  All documents, including missing, waived, and unknown ones.
-                </p>
-              </li>
-            </ul>
           </div>
           <div class="one-image-row">
             <img src="../img/analyzers/audit-1.png" alt="" />
           </div>
           <div class="text-row">
-            <h4>2. Checklist</h4>
+            <h4>Checklist</h4>
             <p>
-              Checklist automatically checks if the data matches the documents
-              using rules.
+              Runs 80+ compliance rules automatically. Passing rules show
+              highlighted data on the source document. Failures display specific
+              context. Failed rules are waivable with audit trail.
             </p>
-            <p>Here's how it works:</p>
-            <ul>
-              <li>
-                <p>It shows rules on the left.</p>
-              </li>
-              <li>
-                <p>You can see if rules failed, were waived, or all rules.</p>
-              </li>
-              <li>
-                <p>
-                  When a rule passes, you see the document and checked data
-                  highlighted.
-                </p>
-              </li>
-            </ul>
           </div>
           <div class="one-image-row">
             <img src="../img/analyzers/audit-2.png" alt="" />
           </div>
           <div class="text-row">
-            <h4>3. Data Audit</h4>
+            <h4>Data Audit (Waive Mode)</h4>
             <p>
-              It compares data from chosen closing documents with data in the
-              LOS.
-            </p>
-            <p>Here's how it works:</p>
-            <ul>
-              <li>
-                <p>
-                  It shows comparisons clearly, so you can save time and improve
-                  loan quality. The field names are in one column, and data from
-                  the LOS and documents are in columns across the top.
-                </p>
-              </li>
-              <li>
-                <p>
-                  The field names are in one column, and data from the LOS and
-                  documents are in columns across the top.
-                </p>
-              </li>
-            </ul>
-            <p>
-              Data Audit quickly finds any differences or missing data in the
-              closed loan documents by bringing all data sources together.
+              Field-by-field comparison of document data vs. LOS. Waive Mode
+              lets analysts dismiss individual mismatches with reasons. Snippets
+              link any data point back to its location on the source document.
             </p>
           </div>
           <div class="one-image-row no-margin-bottom">
             <img src="../img/analyzers/audit-3.png" alt="" />
           </div>
-        </div>
-      </section>
-
-      <section class="product worksheet">
-        <div class="container">
           <div class="text-row">
-            <h3>Audit Worksheet</h3>
+            <h4>Audit Worksheet</h4>
             <p>
-              Audit Analyzer creates an Audit Worksheet that serves as
-              supporting documentation for quality control metrics.
+              Auto-generated compliance report capturing the full review: loan
+              summary, all issues, waived items with reasons, per-borrower audit
+              breakdown. Replaced the manual paper trail.
             </p>
           </div>
           <div class="one-image-row no-margin-bottom">
@@ -285,17 +323,82 @@
         </div>
       </section>
 
-      <section class="product results">
+      <section class="product results impact">
         <div class="container">
           <div class="text-row">
-            <h3>Results</h3>
-            <p>Audit Analyzer brings big advantages to lenders:</p>
-            <ul class="no-margin">
-              <li><p>Gets things done faster</p></li>
-              <li><p>Makes fewer mistakes</p></li>
-              <li><p>Follows rules easier and better</p></li>
-              <li><p>Makes the whole process work better</p></li>
+            <h3>Impact</h3>
+
+            <h4>Efficiency</h4>
+            <ul>
+              <li>
+                <p>
+                  <span>~70–75% reduction in review time</span> — from ~45 min
+                  to 10–15 min per loan
+                </p>
+              </li>
+              <li>
+                <p>
+                  Of 200+ data points and 80+ rules,
+                  <span> analysts focus on 8–15 exceptions </span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  With lenders processing up to 3,000 loans/month per company,
+                  even small time savings per loan compound into
+                  <span>massive operational gains</span>
+                </p>
+              </li>
             </ul>
+
+            <h4>Validation</h4>
+            <ul class="">
+              <li>
+                <p>
+                  <span>Perceived Usefulness: 6.17/7</span> among Post-Closing
+                  Analysts
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Intention to Use: 6.33/7</span> among Post-Closing
+                  Analysts
+                </p>
+              </li>
+              <li>
+                <p>Exception-based review paradigm validated in focus groups</p>
+              </li>
+            </ul>
+
+            <h4>Business & Quality</h4>
+            <ul class="no-margin">
+              <li>
+                <p>First autonomous post-closing solution on the market</p>
+              </li>
+              <li>
+                <p>
+                  Mandatory waive trails eliminated inconsistent reviews across
+                  analysts
+                </p>
+              </li>
+              <li>
+                <p>Audit Worksheet replaced manual compliance documentation</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="product results reflection">
+        <div class="container">
+          <div class="text-row">
+            <h3>Takeaway</h3>
+
+            <p>
+              In complex enterprise products, the designer often becomes the
+              integration point not only for interfaces but also for the teams
+              behind them.
+            </p>
           </div>
         </div>
       </section>

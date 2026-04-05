@@ -13,7 +13,50 @@
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="../js/main.js"></script>
 
-    <script></script>
+    <style>
+      .accordion {
+        margin: 0 auto;
+      }
+      .item {
+        background: #f9f9f9;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+      }
+
+      .title {
+        width: 100%;
+        text-align: left;
+        padding: 16px 16px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* SVG стрелка */
+      .icon {
+        width: 32px;
+        height: 32px;
+        transition: transform 0.3s ease;
+      }
+
+      .item.active .icon {
+        transform: rotate(180deg);
+      }
+
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+        background: white;
+      }
+
+      .content-inner {
+        padding: 24px;
+      }
+    </style>
   </head>
   <body class="product-page aus">
     <header>
@@ -69,6 +112,9 @@
             >/
           </div>
           <h1>AUS Analyzer</h1>
+          <h2>
+            Automating mortgage underwriting review — from 30 minutes to under 7
+          </h2>
         </div>
         <section class="wrapper aus">
           <div class="container product-preview-images">
@@ -79,50 +125,41 @@
     </header>
 
     <main>
+      <!--<section class="product role">
+        <div class="container">
+          <div class="text-row">
+            <p><span>My Role:</span> Sole Product Designer (end-to-end)</p>
+            <p>
+              <span>Team:</span> PM, Engineering, QA, Data Analyst, Subject
+              Matter Expert, UX Research team
+            </p>
+            <p><span>Timeline:</span> 2020–2022 (ongoing support)</p>
+          </div>
+        </div>
+      </section>-->
       <section class="product about">
         <div class="container">
           <div class="text-row">
-            <h3>About Product</h3>
+            <h3>Overview</h3>
             <p>
-              For lenders who want to&nbsp;reduce underwriting defects and
-              inefficiencies. This tool provides a&nbsp;powerful
-              and&nbsp;reliable way to&nbsp;efficiently clear AUS&nbsp;Report
-              messages and rapidly complete document review
-              by&nbsp;underwriters.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="product role">
-        <div class="container">
-          <div class="text-row">
-            <h3>My Role</h3>
-            <p>
-              I worked on this project from the very beginning,
-              <span>presented it at&nbsp;EXP22</span> - one
-              of&nbsp;the&nbsp;largest mortgage tech conferences
-              in&nbsp;America, <span>validated</span> and
-              <span>collected feedback</span>. I&nbsp;<span>still support</span>
-              this project.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="product aus">
-        <div class="container">
-          <div class="text-row">
-            <h3>What is AUS?</h3>
-            <p>
-              <span>Automated Underwriting System</span> is like a&nbsp;digital
-              detective for loan applications. It checks your financial info,
-              like income and debts, to see if you're a&nbsp;good fit for
-              a&nbsp;loan.
+              AUS Analyzer is a tool that
+              <span
+                >automates the review of Automated Underwriting System (AUS)
+                reports</span
+              >
+              for mortgage lenders. It was the
+              <span>first product on the market</span> to do this.
             </p>
             <p>
-              DU (Desktop Underwriter) by Fannie Mae and LPA (Loan Product
-              Advisor) by&nbsp;Freddie Mac are two most popular AUS platforms
-              used by&nbsp;lenders in the&nbsp;USA.
+              <span>I led design end-to-end</span>: discovery, research
+              collaboration, interaction design, prototyping, usability testing,
+              and post-launch iteration. I also presented the product at EXP22,
+              one of the largest mortgage tech conferences in the US.
+            </p>
+            <p class="quote">
+              <span>Key result:</span> Reduced AUS report review time by over
+              80%, from ~30&nbsp;minutes of manual work to under 7&nbsp;minutes
+              per loan file.
             </p>
           </div>
         </div>
@@ -131,123 +168,211 @@
       <section class="product problem">
         <div class="container">
           <div class="text-row">
-            <h3>Classic AUS Process is the Problem</h3>
+            <h3>The Problem</h3>
             <p>
-              Classic AUS process involves manually reviewing and validating AUS
-              results. <span>It takes a&nbsp;lot of&nbsp;time.</span>
+              When someone applies for a mortgage in the US, the loan goes
+              through an
+              <span
+                >Automated Underwriting System that generates a Findings Report
+                — typically 20–35 messages</span
+              >
+              covering income, credit, property, eligibility, and more.
             </p>
-            <ol start="1">
+
+            <div class="one-image-row">
+              <img
+                class="no-border"
+                src="../img/analyzers/aus-reports.png"
+                alt=""
+              />
+            </div>
+            <h4>Classic AUS Process</h4>
+            <p>
+              <span>Underwriters had to manually read each message</span>, find
+              matching loan documents in a separate system, compare data against
+              the Loan Origination System, and track changes between multiple
+              AUS runs. This took <span>25–40 minutes per loan</span>. With
+              lenders processing up to <span>3,000 loans/month</span>, it was
+              slow, error-prone, and mentally draining.
+            </p>
+
+            <div class="one-image-row no-margin-bottom">
+              <img class="" src="../img/analyzers/aus-process.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product research">
+        <div class="container">
+          <div class="text-row">
+            <h3>Discovery & Research</h3>
+
+            <h4>Early discovery</h4>
+            <p>
+              I worked with our SME and PM to
+              <span>map the underwriting workflow and identify pain points</span
+              >. Direct user access was limited (bank employees), so I relied on
+              SME sessions, stakeholder interviews, and early research.
+            </p>
+            <p>
+              Key themes emerged fast:
+              <span>speed is everything for underwriters</span>, AUS reports mix
+              critical items with boilerplate noise, constant context switching
+              between systems kills efficiency, and tracking changes between AUS
+              runs is entirely manual.
+            </p>
+            <p>These insights shaped the MVP design direction.</p>
+            <br />
+            <h4>Pre-launch validation (14 participants)</h4>
+            <p>
+              Before launch, I collaborated with our UX Researcher on a formal
+              study with real mortgage professionals —
+              <span
+                >3 focus group sessions, 14 participants, 90-minute remote
+                sessions</span
+              >
+              with workflow discussion, demo, TAM3 survey, and structured
+              feedback.
+            </p>
+            <p>
+              <span
+                >The study confirmed early assumptions and surfaced new
+                insights:</span
+              >
+              users wanted action-oriented messages instead of walls of text,
+              underwriters needed explicit control over review status, and
+              processors were unsure how the tool fit their specific workflow.
+            </p>
+
+            <div class="one-image-row no-margin">
+              <img class="" src="../img/analyzers/aus-research.png" alt="" />
+            </div>
+            <br />
+            <p>
+              Underwriters — our primary persona — rated usefulness highest.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="product approach">
+        <div class="container">
+          <div class="text-row">
+            <h3>Design Approach</h3>
+
+            <p>Research insights translated into four principles:</p>
+            <ol class="no-margin">
               <li>
                 <p>
-                  <span>Upload Documents:</span> User sends loan application and
-                  papers to the AUS.
+                  <span>Automate the match, not the decision.</span> The system
+                  links AUS messages to loan documents automatically — but the
+                  underwriter stays in control of the final review.
                 </p>
               </li>
               <li>
                 <p>
-                  <span>AUS Checks Documents:</span> The AUS looks at the
-                  papers.
+                  <span>Save time.</span> By streamlining the process, AUS
+                  Analyzer reduces the time spent on manual reviews.
                 </p>
               </li>
               <li>
                 <p>
-                  <span>Receive Report:</span> User gets a report in PDF or XML
-                  with advice and rules.
+                  <span>Improve risk assessment.</span> The tool provides better
+                  visibility into potential issues, enabling more informed
+                  decision-making.
                 </p>
               </li>
               <li>
                 <p>
-                  <span>Manual Review and Compare:</span> User checks the report
-                  and compares it with the papers to make sure everything
-                  matches up.
+                  <span>Increase accuracy.</span> Automated matching minimizes
+                  human error, leading to more reliable outcomes.
                 </p>
               </li>
             </ol>
-            <br />
-            <h4>AUS Report Examples</h4>
-          </div>
-          <div class="one-image-row no-margin">
-            <img
-              class="no-border"
-              src="../img/analyzers/aus-reports.png"
-              alt=""
-            />
+            <div class="one-image-row no-margin-bottom">
+              <img
+                class="no-border"
+                src="../img/analyzers/aus-main.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </section>
-      <section class="product solution">
-        <div class="container">
-          <div class="text-row">
-            <h3>Solution</h3>
-            <p>
-              AUS Analyzer evaluates DU/LPA (AUS Findings Reports) messages
-              and&nbsp;automatically matches them with&nbsp;loan docs and data
-              from other analyzers. So an&nbsp;Underwriter/Lender
-              <span
-                >doesn't have to look at the&nbsp;AUS Findings PDF and manually
-                validate&nbsp;it</span
-              >.
-            </p>
-          </div>
-          <div class="one-image-row no-margin-bottom">
-            <img class="no-border" src="../img/analyzers/aus-main.png" alt="" />
-          </div>
-        </div>
-      </section>
+
       <section class="product features">
         <div class="container">
-          <div class="text-row"><h3>Some Features</h3></div>
+          <div class="text-row"><h3>Key Features</h3></div>
+          <div class="two-cells-row">
+            <div class="left">
+              <img class="no-border" src="../img/analyzers/aus-f6.png" alt="" />
+            </div>
+            <div class="right">
+              <h4>LOS comparison with mismatch detection</h4>
+              <p>
+                Summary view compares AUS data against the Loan Origination
+                System and flags discrepancies (e.g., different loan amounts,
+                property addresses). Mismatches can be waived with a documented
+                reason for audit trails.
+              </p>
+            </div>
+          </div>
 
           <div class="two-cells-row">
             <div class="left">
               <img src="../img/analyzers/aus-f1.png" alt="" />
             </div>
             <div class="right">
+              <h4>Dual report support</h4>
               <p>
-                Support 2 most popular AUS Reports: DU&nbsp;Findings or
-                LPA&nbsp;Feedback Certificate. Any&nbsp;of&nbsp;them can&nbsp;be
-                set as&nbsp;primary.
-              </p>
-              <p>
-                Non-important messages can&nbsp;be marked as&nbsp;reviewed and
-                hidden by&nbsp;default.
+                AUS Analyzer supports both DU Findings and LPA Feedback
+                Certificate. Users can switch between them and set one as
+                primary.
               </p>
             </div>
           </div>
 
-          <div class="two-cells-row">
-            <div class="left">
-              <img src="../img/analyzers/aus-f2.png" alt="" />
-            </div>
-            <div class="right">
-              <p>Messages are categorized.</p>
-            </div>
-          </div>
           <div class="two-cells-row">
             <div class="left">
               <img src="../img/analyzers/aus-f3.png" alt="" />
             </div>
             <div class="right">
+              <h4>Automatic document association</h4>
               <p>
-                Documents associated with the messages are handy, so there's no
-                need to go somewhere else.
+                The system matches loan documents to relevant AUS messages
+                automatically — so the underwriter sees the paystub right next
+                to the income verification message, without searching.
               </p>
             </div>
           </div>
           <div class="two-cells-row">
             <div class="left">
-              <img src="../img/analyzers/aus-f4.png" alt="" />
+              <img class="no-border" src="../img/analyzers/aus-f5.png" alt="" />
             </div>
             <div class="right">
+              <h4>AUS Worksheet generation</h4>
               <p>
-                Data from other analyzers associated with the messages is also
-                attached.
+                Automatically generates a compliance worksheet documenting the
+                review — used for quality control and investor delivery
+              </p>
+            </div>
+          </div>
+          <div class="two-cells-row">
+            <div class="left">
+              <img src="../img/analyzers/aus-f2.png" alt="" />
+            </div>
+            <div class="right">
+              <h4>Smart message categorization</h4>
+              <p>
+                Messages are grouped by domain (Employment/Income, Credit,
+                Eligibility, etc.) with unreviewed items surfaced first.
               </p>
             </div>
           </div>
         </div>
       </section>
-
+      <!--
       <section class="product worksheet">
         <div class="container">
           <div class="text-row">
@@ -266,48 +391,224 @@
           </div>
         </div>
       </section>
+ 
+      <section class="product deepdive">
+        <div class="container accordion">
+          <div class="item text-row">
+            <button class="title">
+              <h3 class="no-margin">Deep Dive: onHover → onClick</h3>
 
-      <section class="product exp22">
-        <div class="container">
-          <div class="text-row">
-            <h3>AUS Analyzer at ICE EXP22</h3>
-            <p>
-              Annual mortgage tech conference brings together thousands
-              of&nbsp;industry leaders to&nbsp;showcase the&nbsp;latest digital
-              mortgage solutions.
-            </p>
-          </div>
-          <div class="two-cells-row">
-            <div class="left">
-              <img src="../img/analyzers/conf.png" alt="" />
-            </div>
-            <div class="right">
-              <p>
-                In 2022, I was part of the&nbsp;team presenting AUS Analyzer at
-                the&nbsp;biggest mortgage tech conference in&nbsp;the&nbsp;US.
-              </p>
-              <p>
-                It was a great opportunity to meet our&nbsp;customers, receive
-                valuable feedback, and gain insights.
-              </p>
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 9L12 15L18 9"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div class="content">
+              <div class="content-inner">
+                <div class="text-row">
+                  <div class="text-row">
+                    <p>Research insights translated into four principles:</p>
+                    <h4>Design Approach</h4>
+
+                    <p>Research insights translated into four principles:</p>
+                    <ol class="no-margin">
+                      <li>
+                        <p>
+                          <span>Automate the match, not the decision.</span> The
+                          system links AUS messages to loan documents
+                          automatically — but the underwriter stays in control
+                          of the final review.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span>Save time.</span> By streamlining the process,
+                          AUS Analyzer reduces the time spent on manual reviews.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span>Improve risk assessment.</span> The tool
+                          provides better visibility into potential issues,
+                          enabling more informed decision-making.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span>Increase accuracy.</span> Automated matching
+                          minimizes human error, leading to more reliable
+                          outcomes.
+                        </p>
+                      </li>
+                    </ol>
+                    <div class="one-image-row no-margin-bottom">
+                      <img
+                        class="no-border"
+                        src="../img/analyzers/aus-main.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="product results">
+
+      
+        <section class="product exp22">
+          <div class="container">
+            <div class="text-row">
+          <h3>AUS Analyzer at ICE EXP22</h3>
+          <p>
+            Annual mortgage tech conference brings together thousands
+            of&nbsp;industry leaders to&nbsp;showcase the&nbsp;latest digital
+            mortgage solutions.
+          </p>
+            </div>
+            <div class="two-cells-row">
+          <div class="left">
+            <img src="../img/analyzers/conf.png" alt="" />
+          </div>
+          <div class="right">
+            <p>
+              In 2022, I was part of the&nbsp;team presenting AUS Analyzer at
+              the&nbsp;biggest mortgage tech conference in&nbsp;the&nbsp;US.
+            </p>
+            <p>
+              It was a great opportunity to meet our&nbsp;customers, receive
+              valuable feedback, and gain insights.
+            </p>
+          </div>
+            </div>
+          </div>
+        </section>
+      -->
+
+      <section class="product results impact">
         <div class="container">
           <div class="text-row">
-            <h3>Results</h3>
-            <p>AUS Analyzer brings significant benefits to&nbsp;lenders:</p>
+            <h3>Impact</h3>
+
+            <h4>Efficiency</h4>
+            <ul>
+              <li>
+                <p>
+                  <span>80%+ reduction in review time</span> — from ~30 min to
+                  under 7 min per loan file
+                </p>
+              </li>
+              <li>
+                <p>
+                  Average DU Findings report contains
+                  <span>25–35 messages</span>; AUS Analyzer auto-matches
+                  documents and filters noise, so underwriters focus on
+                  <span>8–12 actionable items</span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  With lenders processing
+                  <span>up to 3,000 loans/month per company</span>, even small
+                  time savings per loan compound into massive operational gains
+                </p>
+              </li>
+              <li>
+                <p>
+                  Mismatch detection between AUS and LOS
+                  <span>reduced data discrepancy errors</span> before loans
+                  reach investors
+                </p>
+              </li>
+            </ul>
+
+            <h4>User validation</h4>
+            <ul class="">
+              <li>
+                <p>
+                  <span>Perceived Usefulness scored 6.25/7</span> among
+                  underwriters (primary persona)
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Behavioral Intention to Use: 6.0–6.33/7</span> across
+                  all roles
+                </p>
+              </li>
+              <li>
+                <p>
+                  Research participants described it as
+                  <span>making the process "simpler," "incredible"</span> for
+                  tracking changes, and valuable for "cleaner file submissions"
+                </p>
+              </li>
+            </ul>
+
+            <h4>Business impact</h4>
             <ul class="no-margin">
-              <li><p>Speeds up the process</p></li>
-              <li><p>Saves money</p></li>
-              <li><p>Improves understanding of risks</p></li>
-              <li><p>Increases accuracy</p></li>
+              <li>
+                <p>
+                  <span>First product on the market</span> to automate AUS
+                  report review
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span>Presented at ICE Experience 2022 (EXP22)</span> — the
+                  largest mortgage tech conference in the US — where we
+                  collected direct user feedback that fed into further
+                  iterations
+                </p>
+              </li>
             </ul>
           </div>
         </div>
       </section>
+
+      <section class="product results reflection">
+        <div class="container">
+          <div class="text-row">
+            <h3>Reflection</h3>
+
+            <h4>What worked well</h4>
+            <p>
+              <span
+                >Building a strong relationship with the SME was
+                essential.</span
+              >
+              In a domain this complex, having someone who could translate
+              regulatory nuance into design implications made a huge difference.
+            </p>
+            <br />
+            <h4>What I'd do differently</h4>
+
+            <p>
+              I'd push harder for
+              <span>more direct user access earlier</span> in the process. While
+              SME validation was valuable, some assumptions only surfaced when
+              real users interacted with the product.
+            </p>
+            <br />
+            <h4>What I learned</h4>
+            <p>
+              In B2B enterprise design, "fewer clicks" isn't always the right
+              goal. This project taught me to
+              <span>
+                frame UX arguments in terms of risk and accuracy, not just speed </span
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="product projects">
         <div class="container">
           <div class="text-row">
@@ -435,5 +736,30 @@
         </div>
       </section>
     </footer>
+    <script>
+      const items = document.querySelectorAll(".item");
+
+      items.forEach((item) => {
+        const title = item.querySelector(".title");
+        const content = item.querySelector(".content");
+
+        title.addEventListener("click", () => {
+          items.forEach((i) => {
+            if (i !== item) {
+              i.classList.remove("active");
+              i.querySelector(".content").style.maxHeight = null;
+            }
+          });
+
+          item.classList.toggle("active");
+
+          if (item.classList.contains("active")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+            content.style.maxHeight = null;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -228,6 +228,22 @@
   height: 24px;
   background-color: transparent;
 }
+.case-page .case .container .case-single-row ol,
+.case-page .case .container .case-single-row ul {
+  margin-bottom: 48px;
+}
+.case-page .case .container .case-single-row ol li,
+.case-page .case .container .case-single-row ul li {
+  margin: 0 0 12px 0;
+}
+.case-page .case .container .case-single-row ol li:nth-last-of-type(1),
+.case-page .case .container .case-single-row ul li:nth-last-of-type(1) {
+  margin: 0;
+}
+.case-page .case .container .case-single-row ol.no-margin,
+.case-page .case .container .case-single-row ul.no-margin {
+  margin-bottom: 0;
+}
 .case-page .case .container .case-row {
   display: flex;
   justify-content: space-between;
@@ -411,9 +427,6 @@
   background-image: url(../img/gameblyo/landing-bg.png);
   background-size: cover;
   background-position: center;
-}
-.case-page .case.visual .full-w-banner.admin {
-  padding-bottom: 64px;
 }
 
 footer .container {
